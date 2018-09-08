@@ -1,8 +1,8 @@
 import bs4
 import requests
-para= [('q','foss@amrita')]
+parameter= [('q','foss@amrita')]
 url= "https://google.com/search"
-result= requests.get(url=url,params=para)
+result= requests.get(url=url,params=parameter)
 extract=bs4.BeautifulSoup(result.text,'lxml')
 titles=extract.find_all("h3")
 x=0
